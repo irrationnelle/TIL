@@ -9,3 +9,14 @@
 그래서 테스트에서 `uri` 가 존재하지 않는 것인지 mocking 환경설정에 대한 문제인지 파악이 어려운 경우가 생겼다.
 
 고민해볼 필요가 있음.
+
+# 로그인하여 응답으로 jwt token 을 받는 경우 다음과 같은 mocking 이 필요하다.
+
+```java
+    given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
+    given(jwtTokenProvider.createToken(any())).willReturn(TEST_USER_TOKEN);
+```
+
+어느 한쪽의 mocking 도 빼먹는 경우, `204` 나 혹은 `token` 을 받지 못한다는 에러가 발생한다.
+
+그래서 둘을 동시에 mocking을 꼭 해주어야 합니다
