@@ -19,6 +19,7 @@ Today I Learned
 ## angular
 
 - [angular2+ 에서 ngFor directive 로 동일한 elements 는 re-rendering 하지 않기](https://github.com/irrationnelle/TIL/blob/master/angular/ngFor-directive-do-not-rerender-same-elements.md)
+- [pipe 와 innerHtml 을 이용해서 동적 텍스트에 일부만 bold 효과 주기](https://github.com/irrationnelle/TIL/blob/master/angular/dynamic-string-partial-bold-with-innerHtml.md)
 
 ---
 
