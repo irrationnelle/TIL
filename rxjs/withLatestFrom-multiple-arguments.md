@@ -1,4 +1,4 @@
-# `withLatestFrom을 이용해서 다중 인자 받기`
+# `withLatestFrom` 을 이용해서 다중 인자 받기
 
 rxjs 의 파이프라인 중에서 `withLatestFrom` 을 사용해야 할 때
 
@@ -11,7 +11,8 @@ rxjs 의 파이프라인 중에서 `withLatestFrom` 을 사용해야 할 때
 ```typescript
 of(1).pipe(
   withLatestFrom(of('a'), of('b'))
-).subscribe(([first, second]: [string: string])=> {
+).subscribe(([originalSource, first, second]: [number, string, string])=> {
+  console.log(originalSource);
   console.log(first);
   console.log(second);
 })
