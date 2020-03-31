@@ -7,3 +7,7 @@
 ## `NERDTree` 에서 새 파일 작성하기
 
 원하는 `node` 에서 `m` 을 입력한 뒤 `Add child node` 를 선택한다.
+
+## ctags 사용해서 definition 이동하기
+
+굉장히 삽질을 많이 했는데 어찌저찌 성공했다

@@ -21,3 +21,14 @@ Entity 오브젝트라면 `Id` 프로퍼티 값은 있지만 이 프로퍼티의
 # application.properties 을 .gitignore 에 추가하는가?
 
 application.properties 에는 저장소에 공개되서는 안되는 값들을 올리는 곳인데 .gitignore 에 추가하고 따로 관리해야 하는가?
+
+---
+
+# 20-02-29
+
+# webmvc 테스트에서 delete 요청 삭제시
+
+delete 요청 삭제 때는 repository 를 호출하지만 특별히 return 하는 값이 없는데 이 경우에 controller 테스트에 의미가 있나 싶다. `noContent` 응답이 아니라 다른 응답을 보내주어야 하는건가?
+
+
+이 질문은 비단 삭제 요청 뿐만 아니라 컨트롤러가 어떤 값을 response 로 전달해주지 않고 상태 메시지만 전달하는 경우는 전부 해당하는 것 같다. 즉 create 요청에서도 마찬가지라는 이야기
