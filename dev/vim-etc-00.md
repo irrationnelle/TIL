@@ -11,3 +11,26 @@
 ## ctags 사용해서 definition 이동하기
 
 굉장히 삽질을 많이 했는데 어찌저찌 성공했다
+
+이건 이야기가 길어서 이 [링크](https://github.com/irrationnelle/TIL/blob/master/dev/ctags-and-vim.md)로 대체
+
+## 프로젝트 내부에 키워드 검색
+
+### fzf 설치
+
+```
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+```
+
+이후에 `:PlugInstall`
+
+### ag 설치
+
+mac os 기준
+
+```bash
+brew install the_silver_searcher
+```
+
+이렇게 두개가 설치가 완료되면 vim 에서 `:Ag [keyword to search]` 로 검색 가능
