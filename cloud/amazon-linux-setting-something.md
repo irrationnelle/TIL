@@ -30,4 +30,16 @@ $ chsh -s /usr/local/bin/zsh
 
 그러면 5.9 버전이 아니라`zsh 5.8.0.1-dev (x86_64-pc-linux-gnu)`이 설치되어있다. 뭐여.
 
+## vim 최신 버전 설치하기
 
+하는 김에 vim 도 직접 빌드해서 설치해보자.
+
+```bash
+$ git clone https://github.com/vim/vim.git
+$ cd vim
+$ sudo ./configure --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config
+$ make -j8
+$ sudo make install
+```
+
+중간에 `./configure` 로 시작하는 명령어를 실행해주지 않으면 나중에 `UltiSnips requires py >= 2.6 or any py3` 라는 짜증스러운 메시지를 볼 수 있다.
