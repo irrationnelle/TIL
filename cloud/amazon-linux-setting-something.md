@@ -68,9 +68,28 @@ $ ctags --version
 그래서 하드디스크의 일부를 메모리로 사용해주는 작업을 한다.
 
 ```bash
-sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
-sudo /sbin/mkswap /var/swap.1
-sudo chmod 600 /var/swap.1
-sudo /sbin/swapon /var/swap.1
+$ sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+$ sudo /sbin/mkswap /var/swap.1
+$ sudo chmod 600 /var/swap.1
+$ sudo /sbin/swapon /var/swap.1
 ```
 
+## zsh 기본 쉘로 지정하기
+
+```bash
+$ sudo yum install util-linux-user
+```
+
+위 명령어를 실행해야 `chsh` 를 사용할 수 있다.
+
+```bash
+$ chsh -s `which zsh`
+```
+
+## vim bootstrap 의 .vimrc 파일 간단하게 받아오기
+
+```bash
+curl 'https://vim-bootstrap.com/generate.vim' --data 'editor=vim&langs=javascript&langs=html&langs=typescript&langs=rust&langs=python&langs=c' > ~/.vimrc
+```
+
+이 방법을 사용하면 바로 vim 실행 후 `PlugInstall` 로 세팅을 완료할 수 있다.
