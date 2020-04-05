@@ -43,3 +43,20 @@ $ sudo make install
 ```
 
 중간에 `./configure` 로 시작하는 명령어를 실행해주지 않으면 나중에 `UltiSnips requires py >= 2.6 or any py3` 라는 짜증스러운 메시지를 볼 수 있다.
+
+## ctags 최신 버전 설치하기
+
+개발환경 구축을 위해 ctags 도 설치한다.
+
+```bash
+$ sudo yum install -y automake
+$ git clone https://github.com/universal-ctags/ctags.git
+$ cd ctags
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo make install
+$ ctags --version
+```
+
+`automake` 가 사전에 설치되어 있지 않으면 `./autogen.sh` 에서 에러가 발생한다.
