@@ -60,3 +60,17 @@ $ ctags --version
 ```
 
 `automake` 가 사전에 설치되어 있지 않으면 `./autogen.sh` 에서 에러가 발생한다.
+
+## swap 으로 메모리 보충하기
+
+제일 저렴한 인스턴스를 사용하는 중이라 메모리가 부족해서 `npm i` 을 실행하면 한참 걸리다가 killed 로 프로세스가 죽는 일이 발생한다..
+
+그래서 하드디스크의 일부를 메모리로 사용해주는 작업을 한다.
+
+```bash
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+sudo /sbin/mkswap /var/swap.1
+sudo chmod 600 /var/swap.1
+sudo /sbin/swapon /var/swap.1
+```
+
