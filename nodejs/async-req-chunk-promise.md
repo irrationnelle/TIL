@@ -2,7 +2,7 @@
 
 chunk 하여 묶어낸 2차원 배열을 `chunkedArr` 라 할 때,
 
-```tyepscript
+```typescript
 const result = await chunkedArr.reduce((promise: Promise<R[]>, chunk: T)=> {
     return promise.then(async (result: R[])=> {
         const chunkedResult: R[] = await Promise.all(asyncReqFun(chunk));
