@@ -17,6 +17,7 @@ Today I Learned
 - [CRA ( Create React App ) 사용시 .env 사용법](https://github.com/irrationnelle/TIL/blob/master/nodejs/env-variable.md)
 - [Promise.all() 의 병렬처리와 순서 보장](https://github.com/irrationnelle/TIL/blob/master/nodejs/promise.md)
 - [reduce method 에서 accumulator 에 변수 넣기](https://github.com/irrationnelle/TIL/blob/master/nodejs/reduce.md)
+- [자바스크립트에서 50% 확률 제어하기](https://github.com/irrationnelle/TIL/blob/master/nodejs/fifty-percent-random.md)
 
 ---
 
